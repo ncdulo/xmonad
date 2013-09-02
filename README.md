@@ -10,7 +10,7 @@ Dependencies
 ============
 This is a (hopefully complete) list of all packages you will need installed on your system to just drop in my configuration and have it "just work". The core dependencies are what I feel will be needed to maintain the same look and feel of my desktop. The optional ones are just there for enhancement and to name off exactly what I use in my setup while saving you from looking through the configuration yourself. Note that if you use a terminal other than URxvt you may want to update the xmonad.hs to reflect that before running my setup. All of these packages can be found in the official Archlinux repositories or on the AUR.
 
-1. Core
+**Core**
 * XMonad
 * XMonad-contrib
 * dmenu
@@ -19,7 +19,7 @@ This is a (hopefully complete) list of all packages you will need installed on y
 * XMobar
 * Trayer
 * Terminus-font
-2. Optional
+**Optional**
 * numlockx
 * xplanetFX
 * xscreensaver
