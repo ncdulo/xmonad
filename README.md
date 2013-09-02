@@ -19,6 +19,7 @@ This is a (hopefully complete) list of all packages you will need installed on y
 * XMobar
 * Trayer
 * Terminus-font
+
 **Optional**
 * numlockx
 * xplanetFX
