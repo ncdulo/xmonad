@@ -1,0 +1,31 @@
+#!/bin/bash
+
+####
+# Setup our basic environment
+####
+xset +fp /usr/share/fonts/local			# Set our fontpath and scan
+xset fp rehash
+xrdb -merge /home/ncdulo/.Xresources	# Merge our custom Xresources
+xsetroot -cursor_name left_ptr			# Set mouse cursor
+xgamma -gamma 0.85						# Set the display gamma correction
+wmname LG3D	&							# Fix for Java apps
+										#  May not be needed (also in xmonad.hs)
+#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+#start-pulseaudio-x11 &					# PulseAudio sound server
+
+####
+# Startup programs
+####
+
+#feh --bg-fill /home/ncdulo/Pictures/Wallpapers/b2-flying.jpg
+xplanetFX --autostart --tray &			# Cool planet Earth desktop background
+numlockx &								# Enable numlock
+xscreensaver -no-splash &				# Xscreensaver background process
+urxvtd -q -o -f							# Urxvt background server.
+
+# System tray area
+trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 10 --transparent true --alpha 0 --tint 0x000000 --height 18 &
+adeskmenu &								# Root desktop menu/launcher
+clipit &								# Clipboard manager
+
+xmonad									# XMonad! :D
