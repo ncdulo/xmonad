@@ -1,0 +1,21 @@
+Config { font = "-*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*"
+       , borderColor = "black"
+       , border = TopB
+       , bgColor = "black"
+       , fgColor = "gray"
+       , position = Bottom
+       , lowerOnStart = True
+       , hideOnStart = False
+       , persistent = True
+       , commands = [ Run Weather "KMIA" ["-t","Currently <tempF>F with <skyCondition> skies and <rh>% humidity","-L","66","-H","85","--normal","green","--high","red","--low","lightblue"] 18000
+                    , Run Network "wlp0s20u2" ["-L","0","-H","32","--normal","green","--high","red","-t","[<rx>KB][<tx>KB]"] 10
+                    , Run MultiCpu ["-L","3","-H","50","--normal","green","--high","red","-t","[<bar0>][<bar1>]"] 10
+                    , Run Memory ["-t","[<usedbar>]"] 10
+                    , Run Swap ["-t","[<usedratio>%]"] 10
+                    , Run Date "%A %B %_d[%U] %Y %I:%M:%S%P" "date" 10
+                    , Run Com "/home/ncdulo/.xmonad/xmobar_sensors" [""] "temps" 50
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%multicpu%%memory%+%swap%%wlp0s20u2% }{ %KMIA% | <fc=#ee9a00>%date%</fc>"
+       }

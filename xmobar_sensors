@@ -1,0 +1,2 @@
+#!/bin/bash
+sensors -f | awk '{ print $3 }' | sed -e 's/+//' | awk -F"." '{ print $1 }' | sed '/^.\{4\}/d' | sed ':a;N;$!ba;s/\n/ /g' | sed 's/^[ \t]*//;s/[ \t]*$//'

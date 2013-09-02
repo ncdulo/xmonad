@@ -1,0 +1,15 @@
+Config { font = "-*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*"
+       , bgColor = "black"
+       , fgColor = "white"
+       , border = TopB
+       , borderColor = "black"
+       , position = Static { xpos = 0 , ypos = 0, width = 1440, height = 18 }
+       , lowerOnStart = True
+       , hideOnStart = False
+       , persistent = False
+       , commands = [ Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{"
+       }
