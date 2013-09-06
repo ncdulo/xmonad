@@ -57,6 +57,7 @@ myManageHook = composeAll
     , className =? "smplayer"           --> doShift "6:media"
     , className =? "Xscreensaver-demo"  --> doFloat
     , className =? "Steam"              --> doFloat
+    , className =? "Speedcrunch"        --> doFloat
     , manageDocks
     ]
 
